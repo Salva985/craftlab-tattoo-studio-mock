@@ -1,4 +1,5 @@
 import { useT } from '../i18n/useT.js'
+import GallerySection from '../components/sections/GallerySection.jsx'
 
 export default function Home() {
   const t = useT()
@@ -30,13 +31,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="gallery" className="mx-auto max-w-6xl px-4 py-20">
-        <h2 className="text-2xl font-semibold">{t('sections.gallery')}</h2>
-        <div className="mt-6 rounded-xl border border-white/10 p-10 text-white/60">
-          Gallery preview goes here
-        </div>
-      </section>
+      <GallerySection />
 
+      {/* PRICING */}
       <section id="pricing" className="mx-auto max-w-6xl px-4 py-20">
         <h2 className="text-2xl font-semibold">{t('sections.pricing')}</h2>
         <div className="mt-6 rounded-xl border border-white/10 p-10 text-white/60">
@@ -44,6 +41,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BOOKING */}
       <section id="booking" className="mx-auto max-w-6xl px-4 py-20">
         <h2 className="text-2xl font-semibold">{t('sections.booking')}</h2>
         <div className="mt-6 rounded-xl border border-white/10 p-10 text-white/60">
