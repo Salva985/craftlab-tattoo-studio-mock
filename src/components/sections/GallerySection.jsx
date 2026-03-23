@@ -5,7 +5,6 @@ import { useLocale } from "../../i18n/I18nProvider.jsx";
 import { useT } from "../../i18n/useT.js";
 import { formatDateDMY } from "../../utils/date.js";
 import Modal from "../ui/Modal.jsx";
-import { buildWhatsAppLink } from "../../utils/whatsapp.js";
 
 function getText(field, locale) {
   if (!field) return "";
@@ -140,18 +139,15 @@ export default function GallerySection() {
               </div>
 
               <a
-                href={buildWhatsAppLink({
-                  phoneE164: "+34622807032", // TODO: studio number
-                  message: `Hi! I’m interested in this tattoo style: ${getText(
-                    activeItem.title,
-                    locale
-                  )}.`,
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`#booking?style=${encodeURIComponent(
+                  activeItem.styles?.[0] || ''
+                )}&title=${encodeURIComponent(
+                  getText(activeItem.title, locale)
+                )}`}
+                onClick={() => setActiveItem(null)}
                 className="mt-6 inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black hover:opacity-90"
               >
-                {t("gallery.bookStyle")}
+                {t('gallery.bookStyle')}
               </a>
             </div>
           </div>

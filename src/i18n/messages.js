@@ -52,6 +52,28 @@ export const messages = {
     },
   },
 
+  booking: {
+    subtitle: {
+      en: 'Tell us about your idea and we’ll get back to you.',
+      es: 'Cuéntanos tu idea y te responderemos.',
+      it: 'Raccontaci la tua idea e ti risponderemo.',
+    },
+    name: { en: 'Name', es: 'Nombre', it: 'Nome' },
+    contact: { en: 'Contact (phone/email)', es: 'Contacto', it: 'Contatto' },
+    date: { en: 'Preferred date', es: 'Fecha preferida', it: 'Data preferita' },
+    service: { en: 'Select service', es: 'Selecciona servicio', it: 'Seleziona servizio' },
+    tattoo: { en: 'Tattoo', es: 'Tatuaje', it: 'Tattoo' },
+    piercing: { en: 'Piercing', es: 'Piercing', it: 'Piercing' },
+    style: { en: 'Style (optional)', es: 'Estilo (opcional)', it: 'Stile (opzionale)' },
+    message: { en: 'Message', es: 'Mensaje', it: 'Messaggio' },
+    submit: { en: 'Send via WhatsApp', es: 'Enviar por WhatsApp', it: 'Invia via WhatsApp' },
+    success: {
+      en: 'Redirecting to WhatsApp...',
+      es: 'Redirigiendo a WhatsApp...',
+      it: 'Reindirizzamento a WhatsApp...',
+    },
+  },
+
   footer: {
     copyright: {
       en: 'CraftLab Tattoo Studio Mock',
