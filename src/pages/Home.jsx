@@ -1,5 +1,6 @@
 import { useT } from '../i18n/useT.js'
 import GallerySection from '../components/sections/GallerySection.jsx'
+import PricingSection from '../components/sections/PricingSection.jsx'
 import BookingSection from '../components/sections/BookingSection.jsx'
 
 export default function Home() {
@@ -35,12 +36,7 @@ export default function Home() {
       <GallerySection />
 
       {/* PRICING */}
-      <section id="pricing" className="mx-auto max-w-6xl px-4 py-20">
-        <h2 className="text-2xl font-semibold">{t('sections.pricing')}</h2>
-        <div className="mt-6 rounded-xl border border-white/10 p-10 text-white/60">
-          Pricing tables go here
-        </div>
-      </section>
+      <PricingSection />
 
       {/* BOOKING */}
       <BookingSection />

@@ -5,6 +5,7 @@ import { useLocale } from "../../i18n/I18nProvider.jsx";
 import { useT } from "../../i18n/useT.js";
 import { formatDateDMY } from "../../utils/date.js";
 import Modal from "../ui/Modal.jsx";
+import { goToBooking } from '../../utils/booking.js'
 
 function getText(field, locale) {
   if (!field) return "";
@@ -24,7 +25,7 @@ export default function GallerySection() {
   }, [style]);
 
   return (
-    <section id="gallery" className="mx-auto max-w-6xl px-4 py-20">
+    <section id="gallery" className="bg-[#161616] mx-auto max-w-6xl px-4 py-20">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 className="text-2xl font-semibold">{t("sections.gallery")}</h2>
@@ -138,17 +139,21 @@ export default function GallerySection() {
                 ))}
               </div>
 
-              <a
-                href={`#booking?style=${encodeURIComponent(
-                  activeItem.styles?.[0] || ''
-                )}&title=${encodeURIComponent(
-                  getText(activeItem.title, locale)
-                )}`}
-                onClick={() => setActiveItem(null)}
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveItem(null)
+
+                  goToBooking({
+                    service: 'tattoo',
+                    style: activeItem.styles?.[0] || '',
+                    title: getText(activeItem.title, locale),
+                  })
+                }}
                 className="mt-6 inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black hover:opacity-90"
               >
                 {t('gallery.bookStyle')}
-              </a>
+              </button>
             </div>
           </div>
         )}

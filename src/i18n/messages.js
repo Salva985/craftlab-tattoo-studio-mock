@@ -52,6 +52,22 @@ export const messages = {
     },
   },
 
+  pricing: {
+    tattoo: { en: 'Tattoo', es: 'Tatuajes', it: 'Tattoo' },
+    piercing: { en: 'Piercing', es: 'Piercings', it: 'Piercing' },
+    bookTattoo: {
+      en: 'Book a tattoo',
+      es: 'Reservar tatuaje',
+      it: 'Prenota tatuaggio',
+    },
+    bookPiercing: {
+      en: 'Book a piercing',
+      es: 'Reservar piercing',
+      it: 'Prenota piercing',
+    },
+  },
+
+
   booking: {
     subtitle: {
       en: 'Tell us about your idea and we’ll get back to you.',

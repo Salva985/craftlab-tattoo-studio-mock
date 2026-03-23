@@ -27,14 +27,15 @@ export default function BookingSection() {
 
       const style = params.get('style')
       const title = params.get('title')
+      const service = params.get('service')
 
       setForm((prev) => ({
         ...prev,
+        service: service || prev.service,
         style: style || prev.style,
         message: title
           ? `I’m interested in a design similar to "${title}".`
           : prev.message,
-        service: 'tattoo',
       }))
 
       const el = document.getElementById('booking')
@@ -78,7 +79,7 @@ ${t('booking.message')}: ${form.message}
   }
 
   return (
-    <section id="booking" className="mx-auto max-w-6xl px-4 py-20">
+    <section id="booking" className="bg-[#161616] mx-auto max-w-6xl px-4 py-20">
       <div className="max-w-2xl">
         <h2 className="text-2xl font-semibold">{t('sections.booking')}</h2>
         <p className="mt-2 text-white/60">
